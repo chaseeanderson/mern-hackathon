@@ -6,10 +6,12 @@ import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import OrderList from '../../components/OrderList/OrderList';
 import { useState, useEffect } from 'react';
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
 
 export default function OrderHistoryPage({ user, setUser }) {
   const [orders, setOrders] = useState([]);
+  const [activeOrder, setActiveOrder] = useState(null);
 
   useEffect(function() {
     async function getOrders() {
@@ -27,7 +29,10 @@ export default function OrderHistoryPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
     <div>
-      <OrderList orders={orders} />
+      <OrderList orders={orders} setActiveOrder={setActiveOrder} />
+    </div>
+    <div>
+      <OrderDetail order={activeOrder} />
     </div>
 
 

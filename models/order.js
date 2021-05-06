@@ -51,6 +51,12 @@ orderSchema.statics.getCart = function(userId) {
   );
 };
 
+orderSchema.statics.getOrders = function(userId) {
+  return this.find({
+    user: userId
+  });
+};
+
 // Instance method for adding an item to a cart (unpaid order)
 orderSchema.methods.addItemToCart = async function (itemId) {
   // this keyword is bound to the cart (order doc)

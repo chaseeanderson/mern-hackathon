@@ -17,6 +17,7 @@ export default function OrderHistoryPage({ user, setUser }) {
     async function getOrders() {
       const updatedOrders = await ordersAPI.getOrders()
       setOrders(updatedOrders);
+      setActiveOrder(orders[0]);
     }
     getOrders();
   }, []);
@@ -29,7 +30,7 @@ export default function OrderHistoryPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
     <div>
-      <OrderList orders={orders} setActiveOrder={setActiveOrder} />
+      <OrderList orders={orders} setActiveOrder={setActiveOrder} activeOrder={activeOrder} />
     </div>
     <div>
       <OrderDetail order={activeOrder} />

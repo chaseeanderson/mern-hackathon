@@ -1,0 +1,21 @@
+/* .OrderList {
+    display: flex;
+    flex-direction: column;
+    border: 
+} */
+
+.OrderList {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vmin;
+    font-size: 2vmin;
+    color: var(--text-light);
+    border: 2px solid grey;
+    border-radius: 2vmin;
+    height: 90vh;
+    margin-top: 3vmin;
+    background: lightgray;
+  }
+  
+  

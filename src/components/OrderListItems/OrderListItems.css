@@ -1,0 +1,31 @@
+.OrderListItems {
+    border: 1px solid black;
+    border-radius: 2vmin;
+    padding: 0.75vmin;
+    background: peachpuff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    cursor: pointer;
+    margin: 2vmin 0 2vmin 0;
+}
+
+.IdText {
+    font-size: 80%;
+}
+
+.LeftColumn {
+    grid-column: 1 / 2;
+    padding-left: 1.5vmin;
+}
+
+.RightColumn {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 1.5vmin;
+}
+
+.OrderListItems:active {
+    border: 1px solid red;
+}
